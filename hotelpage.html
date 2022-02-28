@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="C:\Users\ARCHANA M\Downloads\logoimg.jpeg">
+    <title>DELISH 2 GO</title>
+    <style>
+      
+  .icons{
+      max-width:40%;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      transform: translateY(-50%);
+      padding:15px;
+  }
+  .navigation{
+  position: relative;
+  width: 350px;
+  height: 70px;
+  border-radius: 20px 40px;
+  opacity: 0.7;
+  
+}
+.navigation ul{
+  display: flex;
+}
+.navigation ul li{
+  position: relative;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  z-index: 1;
+  border: 5px solid black;
+  background-color: white;
+}
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color:black;
+}
+.navigation ul li a .icon{
+  position: relative;
+  line-height: 75px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.navigation ul li.active a .icon{
+  font-size: 20px;
+  transform: translateY(-6px);
+}
+.navigation ul li a .text{
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.25s;
+}
+.navigation ul li.active a .text{
+  transform: scale(1);
+}
+.indicator{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+  background: #f53b57;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  background: #5d62fb;
+  box-shadow: 0 15px 25px #5d62fb99;
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  background: #05c46b;
+  box-shadow: 0 15px 25px #05c46b99;
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  background: #0fbcf9;
+  box-shadow: 0 15px 25px #0fbcf999;
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  background: #ffa801;
+  box-shadow: 0 15px 25px #ffa80199;
+  transform: translateX(calc(70px * 4));
+}
+        body {
+            margin: 0;
+            padding: 0;
+            animation: effect 3s linear infinite;
+        }
+      
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+        }
+      
+      
+      
+        @keyframes effect {
+            0% {
+                background: linear-gradient(pink, #00FF00);
+            }
+      
+            50% {
+                background: linear-gradient(yellow, #0084ff);
+            }
+      
+            100% {
+                background: linear-gradient(violet, #ff4800);
+            }
+        }
+        .image{
+            padding-bottom:30%;
+            border-radius: 25%;
+        }
+        .qrcode{
+            padding-top: 25%;
+        }
+        html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 30px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 20px;
+  margin-top: 200%;
+  float:left;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(100px + 100px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+.hotels{
+  border-radius:20px;
+  background-color:antiquewhite;
+  opacity: 0.7;
+  
+}
+</style>    
+</head>
+<body>
+  <div class="icons">
+    <div class="navigation">
+      <ul>
+        <li class="list">
+          <a href="file:///C:/Users/ARCHANA%20M/Desktop/mine/delish2go.html">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="contact.html">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="text">Contact</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="mailto:email@archanaa1404@gmail.com">
+            <span class="icon">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </span>
+            <span class="text">Mail</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="freetime.html">
+            <span class="icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
+    </div>
+    </div>
+    <script src="js.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <div class="hotels">
+            1.RED PEARL HOTEL<a href="RED PEARL.html"><img src="https://highlandershockey.ca/public/images/common/sponsors/highlandersqr1.jpg" width="70" height="70"> </a>
+            <BR>
+            2.007 PUNJABI DHABA<a href="007 Punjabi Dhaba.html"><img src="https://th.bing.com/th/id/R.929fca0173415b5289f4d34fbb46cdfa?rik=hUQB3x5u%2f7k7vw&riu=http%3a%2f%2fwww.adilvirani.ca%2fimages%2fchart.jpg&ehk=M3%2fTwGvV%2biz2lMYQkYhRMlXPY2lE08X4XJWBX9y8O7w%3d&risl=&pid=ImgRaw&r=0" width="70" height="70"> </a>
+            <BR>
+            3.CHETTINADU HOTEL<a href="CHETTINADU.html"><img src="https://th.bing.com/th/id/R.e6122a7a2e539dd2595c5ba16e62c39f?rik=Jj7x4oyib1YypQ&riu=http%3a%2f%2fwww.rightmovepattaya.com%2fpublic%2fimages%2fQR-Rightmove-Itunes-and-google.png&ehk=zzU%2b9ZUxptuT7rBX0KgjhnmQSLVcI7jXBqdmlQ0c6s8%3d&risl=&pid=ImgRaw&r=0" width="70" height="70"> </a>
+            <BR>
+            4.JUNIOR KUPANNA<a href="JUNIOR KUPANNA.html"><img src="https://th.bing.com/th/id/R.a13a5adbf8cbf6a59ecf81a596175f05?rik=kRiI17xxRMbidg&riu=http%3a%2f%2fwww.persense.com%2fgraphics%2fqr%2f483-8.png&ehk=XXVn7OnEnp7WUQNUwKI2a4F2ta7nIX1NlV32p8QHbDU%3d&risl=&pid=ImgRaw&r=0" width="70" height="70"> </a>
+            <BR>
+            5.BARBEQUE NATION<a href="BARBEQUE NATION.html"><img src="https://eepurl.com/bWDqN9.qr.16" width="70" height="70"></a>
+   </div>  
+   
+</body>  
+    </html>

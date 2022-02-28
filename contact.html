@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>DELISH 2 GO</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\ARCHANA M\Downloads\logoimg.jpeg">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+<style>
+  body{
+      background-image:url(https://www.wallpaperflare.com/static/996/299/609/texture-simple-background-gradient-dark-wallpaper.jpg);
+      background-repeat: no-repeat;
+    }
+    .slider {
+    position: relative;
+    width: 350px;
+    margin: 50px auto;
+    perspective: 1000px;
+    padding-top: 120px;
+    }
+ .rotator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 55%;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: roter 29s linear infinite;
+    }
+    .items {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid white;
+    }
+
+ .items img {
+    height: 100%;
+    width: 100%;
+    transition: all 3s ease;
+    }
+    .items:hover img {
+    transform: scale(1.1);
+    }
+    @keyframes roter {
+    from {
+    transform: rotateY(0deg);
+    }
+    to {
+    transform: rotateY(360deg);
+    }
+    }
+    .items:first-child {
+    transform: rotateY(calc(40deg)) translateZ(300px);
+    }
+
+ .items:nth-child(2) {
+    transform: rotateY(calc(80deg)) translateZ(300px);
+    }
+
+ .items:nth-child(3) {
+    transform: rotateY(calc(120deg)) translateZ(300px);
+    }
+
+ .items:nth-child(4) {
+    transform: rotateY(calc(160deg)) translateZ(300px);
+    }
+
+ .items:nth-child(5) {
+    transform: rotateY(calc(200deg)) translateZ(300px);
+    }
+
+ .items:nth-child(6) {
+    transform: rotateY(calc(240deg)) translateZ(300px);
+    }
+
+ .items:nth-child(7) {
+    transform: rotateY(calc(280deg)) translateZ(300px);
+    }
+
+ .items:nth-child(8) {
+    transform: rotateY(calc(320deg)) translateZ(300px);
+    }
+
+ .items:nth-child(9) {
+    transform: rotateY(calc(360deg)) translateZ(300px);
+    }
+    .rotator:hover {
+    animation-play-state: paused;
+    }
+    .info{
+      padding-top:300px;
+      font-size: 25px;
+      color:white;
+      text-align: center;
+    }
+    .logo{
+      max-width:30%;
+      position:absolute;
+      top:50%;
+      left:0;
+      transform: translateY(-50%);
+      padding:300px;
+      opacity:0.8;
+      
+}
+
+.icons{
+      max-width:50%;
+      position: absolute;
+      top: 10%;
+      left: 0;
+      transform: translateY(-50%);
+      padding:10px;
+  }
+  .navigation{
+  position: relative;
+  width: 350px;
+  height: 70px;
+  border-radius: 20px 40px;
+  opacity: 0.7;
+  
+}
+.navigation ul{
+  display: flex;
+}
+.navigation ul li{
+  position: relative;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  z-index: 1;
+  border: 5px solid black;
+  background-color: white;
+}
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color:black;
+}
+.navigation ul li a .icon{
+  position: relative;
+  line-height: 75px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.navigation ul li.active a .icon{
+  font-size: 20px;
+  transform: translateY(-6px);
+}
+.navigation ul li a .text{
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.25s;
+}
+.navigation ul li.active a .text{
+  transform: scale(1);
+}
+.indicator{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+  background: #f53b57;
+  box-shadow: 0 15px 25px #f53b5799;
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  background: #5d62fb;
+  box-shadow: 0 15px 25px #5d62fb99;
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  background: #05c46b;
+  box-shadow: 0 15px 25px #05c46b99;
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  background: #0fbcf9;
+  box-shadow: 0 15px 25px #0fbcf999;
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  background: #ffa801;
+  box-shadow: 0 15px 25px #ffa80199;
+  transform: translateX(calc(70px * 4));
+}
+
+
+
+</style>
+</head>
+<body>
+   <div class="w3-content w3-section" style="max-width:100%">   
+      <div class="icons">
+      <div class="navigation">
+        <ul>
+          <li class="list">
+            <a href="file:///C:/Users/ARCHANA%20M/Desktop/mine/delish2go.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="contact.html">
+              <span class="icon">
+                <ion-icon name="person-outline"></ion-icon>
+              </span>
+              <span class="text">Contact</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="mailto:email@archanaa1404@gmail.com">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="text">Mail</span>
+            </a>
+          </li>
+          <div class="indicator"></div>
+          <li class="list">
+            <a href="freetime.html">
+              <span class="icon">
+                <ion-icon name="time-outline"></ion-icon>
+              </span>
+              <span class="text">Free time</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      
+      <script src="js.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <div class="slider">
+    <div class="rotator">
+       <div class="items">
+          <img src="C:\Users\ARCHANA M\Downloads\alcyimg.jpeg">
+       </div>
+       <div class="items">
+          <img src="C:\Users\ARCHANA M\Downloads\arthiimg.jpeg">
+       </div>
+       <div class="items">
+          <img src="C:\Users\ARCHANA M\Downloads\archaimg.jpeg">
+       </div>
+       <div class="items">
+          <img src="C:\Users\ARCHANA M\Downloads\hariniimg.jpeg">
+       </div>
+       <div class="items">
+        <img src="C:\Users\ARCHANA M\Downloads\logoimg.jpeg">
+     </div>
+     <div class="items">
+        <img src="C:\Users\ARCHANA M\Downloads\alcyimg.jpeg">
+     </div>
+     <div class="items">
+        <img src="C:\Users\ARCHANA M\Downloads\arthiimg.jpeg">
+     </div>
+     <div class="items">
+        <img src="C:\Users\ARCHANA M\Downloads\archaimg.jpeg">
+     </div>
+     <div class="items">
+        <img src="C:\Users\ARCHANA M\Downloads\hariniimg.jpeg">
+     </div>
+    </div>
+ </div>
+ <div class="info">
+ <div>
+    HARINI-7135860249(TEAM LEADER)
+ </div>
+ <div>
+   ARTHI-6587429510(PROJECT MANAGER)
+ </div>
+<div>
+    ARCHANA-9472816351(PROJECT DESIGNER)
+   </div>
+   <div>
+    ALMITHA DENCY-7708361989(TEAM COORDINATOR)
+   </div>
+  </div>
+
+</body>
+</html>

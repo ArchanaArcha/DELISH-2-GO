@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="C:\Users\ARCHANA M\Downloads\logoimg.jpeg">
+    <title>DELISH 2 GO</title>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body,
+html {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(242, 242, 242);
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 16, 0.8);
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  background-image: url(https://wallpapercave.com/wp/wp2261083.jpg);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: rgba(0, 0, 16, 0.8);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  border-bottom: 0.1em solid rgba(0, 0, 16, 0.8);
+  color: rgba(0, 0, 16, 0.8);
+  text-decoration: none;
+}
+
+span {
+  color: rgba(0, 0, 16, 0.4);
+  font-size: 70%;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+  background-color: rgb(255, 255, 255);
+  padding: 0.8rem;
+  width: 33rem;
+}
+
+.rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+}
+
+.rating-text p {
+  color: rgba(0, 0, 16, 0.8);
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.rating {
+  background-color: rgba(0, 0, 16, 0.8);
+  padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+  border-radius: 2.2rem;
+}
+
+svg {
+  fill: rgb(242, 242, 242);
+  height: 3.6rem;
+  width: 3.6rem;
+  margin: 0.2rem;
+}
+
+.rating-form-2 svg {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+#radios label {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"] + svg {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input + svg {
+  cursor: pointer;
+}
+
+input[class="super-happy"]:hover + svg,
+input[class="super-happy"]:checked + svg,
+input[class="super-happy"]:focus + svg {
+  fill: rgb(0, 109, 217);
+}
+
+input[class="happy"]:hover + svg,
+input[class="happy"]:checked + svg,
+input[class="happy"]:focus + svg {
+  fill: rgb(0, 204, 79);
+}
+
+input[class="neutral"]:hover + svg,
+input[class="neutral"]:checked + svg,
+input[class="neutral"]:focus + svg {
+  fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover + svg,
+input[class="sad"]:checked + svg,
+input[class="sad"]:focus + svg {
+  fill: rgb(229, 132, 0);
+}
+
+input[class="super-sad"]:hover + svg,
+input[class="super-sad"]:checked + svg,
+input[class="super-sad"]:focus + svg {
+  fill: rgb(239, 42, 16);
+}
+
+@media screen and (max-width: 650px) and (max-height: 700px) {
+  body,
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  body,
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body,
+  html {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 450px) and (max-height: 550px) {
+  body,
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  body,
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body,
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 400px) and (max-height: 500px) {
+  body,
+  html {
+    height: 500px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  body,
+  html {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body,
+  html {
+    width: 400px;
+  }
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+  background-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 200;
+}
+
+h1{
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2fcc71;
+  max-width: 40%;
+  margin: 20px auto;
+}
+
+/* CONTAINERS */
+
+.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.four { width: 32.26%; max-width: 32.26%;}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input, .form .payment-plan input, .form .payment-type input{
+  display: none;
+}
+
+.form label{
+  position: relative;
+  color: #fff;
+  background-color: #aaa;
+  font-size: 26px;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  display: block;
+  cursor: pointer;
+  border: 3px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+  border: 3px solid #333;
+  background-color: #2fcc71;
+}
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+  content: "\2713";
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100%;
+  border: 2px solid #333;
+  background-color: #2fcc71;
+  z-index: 999;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+BUTTON{
+    background-color: #2fcc71;
+    color: white;
+    padding:10px 10px 10px 10px;
+    font-weight: bold;
+    border: 2px solid #333;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHECK OUT FORM</h1>
+        <section class="payment-type cf">
+            <h2>ENTER YOUR TABLE NUMBER</h2>
+            <input type="text" name="table" id="table" ><label class="credit-label four col" for="table"></label>
+          </section>  
+        <form class="form cf">
+          <section class="plan cf">
+            <h2>DO YOU WANT WATER BOTTLE & CUTLERY?</h2>
+            <input type="radio" name="radio1" id="free" value="free"><label class="free-label four col" for="free">YES</label>
+            <input type="radio" name="radio1" id="basic" value="basic" checked><label class="basic-label four col" for="basic">NO</label>
+          </section>
+            <h2>SELECT A PAYMENT TYPE</h2>
+            <section class="payment-type cf">
+            <input type="radio" name="radio2" id="monthly" value="monthly" checked><label class="monthly-label four col" for="monthly">CASH</label>
+            <input type="radio" name="radio2" id="yearly" value="yearly"><label class="yearly-label four col" for="yearly">CARD</label>
+          </section>
+      </div>     
+      <div class="card">
+        <div class="rating-container">
+          <div class="rating-text">
+            <p>I'm feeling...</p>
+          </div>
+          <div class="rating">
+            <form class="rating-form">
+      
+              <label for="super-happy">
+            <input type="radio" name="rating" class="super-happy" id="super-happy" value="super-happy" />
+            <svg viewBox="0 0 24 24"><path d="M12,17.5C14.33,17.5 16.3,16.04 17.11,14H6.89C7.69,16.04 9.67,17.5 12,17.5M8.5,11A1.5,1.5 0 0,0 10,9.5A1.5,1.5 0 0,0 8.5,8A1.5,1.5 0 0,0 7,9.5A1.5,1.5 0 0,0 8.5,11M15.5,11A1.5,1.5 0 0,0 17,9.5A1.5,1.5 0 0,0 15.5,8A1.5,1.5 0 0,0 14,9.5A1.5,1.5 0 0,0 15.5,11M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>
+            </label>
+      
+              <label for="happy">
+            <input type="radio" name="rating" class="happy" id="happy" value="happy" checked />
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8C16.3,8 17,8.7 17,9.5M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23Z" /></svg>
+            </label>
+      
+              <label for="neutral">
+            <input type="radio" name="rating" class="neutral" id="neutral" value="neutral" />
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path d="M8.5,11A1.5,1.5 0 0,1 7,9.5A1.5,1.5 0 0,1 8.5,8A1.5,1.5 0 0,1 10,9.5A1.5,1.5 0 0,1 8.5,11M15.5,11A1.5,1.5 0 0,1 14,9.5A1.5,1.5 0 0,1 15.5,8A1.5,1.5 0 0,1 17,9.5A1.5,1.5 0 0,1 15.5,11M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M9,14H15A1,1 0 0,1 16,15A1,1 0 0,1 15,16H9A1,1 0 0,1 8,15A1,1 0 0,1 9,14Z" /></svg>
+            </label>
+      
+              <label for="sad">
+            <input type="radio" name="rating" class="sad" id="sad" value="sad" />
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 24 24"><path d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M15.5,8C16.3,8 17,8.7 17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M12,14C13.75,14 15.29,14.72 16.19,15.81L14.77,17.23C14.32,16.5 13.25,16 12,16C10.75,16 9.68,16.5 9.23,17.23L7.81,15.81C8.71,14.72 10.25,14 12,14Z" /></svg>
+            </label>
+      
+              <label for="super-sad">
+            <input type="radio" name="rating" class="super-sad" id="super-sad" value="super-sad" />
+            <svg viewBox="0 0 24 24"><path d="M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M16.18,7.76L15.12,8.82L14.06,7.76L13,8.82L14.06,9.88L13,10.94L14.06,12L15.12,10.94L16.18,12L17.24,10.94L16.18,9.88L17.24,8.82L16.18,7.76M7.82,12L8.88,10.94L9.94,12L11,10.94L9.94,9.88L11,8.82L9.94,7.76L8.88,8.82L7.82,7.76L6.76,8.82L7.82,9.88L6.76,10.94L7.82,12M12,14C9.67,14 7.69,15.46 6.89,17.5H17.11C16.31,15.46 14.33,14 12,14Z" /></svg>
+            </label>
+      
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="rating-container">
+          <div class="rating-text">
+            <p>Do you like our app?</p>
+          </div>
+          <div class="rating">
+            <form class="rating-form-2">
+      
+              <label for="super-happy2">
+            <input type="radio" name="rating" class="super-happy" id="super-happy2" value="super-happy2" checked />
+            <svg viewBox="0 0 24 24"><path d="M23,10C23,8.89 22.1,8 21,8H14.68L15.64,3.43C15.66,3.33 15.67,3.22 15.67,3.11C15.67,2.7 15.5,2.32 15.23,2.05L14.17,1L7.59,7.58C7.22,7.95 7,8.45 7,9V19A2,2 0 0,0 9,21H18C18.83,21 19.54,20.5 19.84,19.78L22.86,12.73C22.95,12.5 23,12.26 23,12V10M1,21H5V9H1V21Z" /></svg>
+            </label>
+      
+              <label for="neutral2">
+            <input type="radio" name="rating" class="neutral" id="neutral2" value="neutral2" />
+            <svg viewBox="0 0 24 24"><path d="M22.5,10H15.75C15.13,10 14.6,10.38 14.37,10.91L12.11,16.2C12.04,16.37 12,16.56 12,16.75V18A1,1 0 0,0 13,19H18.18L17.5,22.18V22.42C17.5,22.73 17.63,23 17.83,23.22L18.62,24L23.56,19.06C23.83,18.79 24,18.41 24,18V11.5A1.5,1.5 0 0,0 22.5,10M12,6A1,1 0 0,0 11,5H5.82L6.5,1.82V1.59C6.5,1.28 6.37,1 6.17,0.79L5.38,0L0.44,4.94C0.17,5.21 0,5.59 0,6V12.5A1.5,1.5 0 0,0 1.5,14H8.25C8.87,14 9.4,13.62 9.63,13.09L11.89,7.8C11.96,7.63 12,7.44 12,7.25V6Z" /></svg>
+            </label>
+      
+              <label for="sad2">
+            <input type="radio" name="rating" class="sad" id="sad2" value="sad2" />
+            <svg viewBox="0 0 24 24"><path d="M19,15V3H23V15H19M15,3A2,2 0 0,1 17,5V15C17,15.55 16.78,16.05 16.41,16.41L9.83,23L8.77,21.94C8.5,21.67 8.33,21.3 8.33,20.88L8.36,20.57L9.31,16H3C1.89,16 1,15.1 1,14V12C1,11.74 1.05,11.5 1.14,11.27L4.16,4.22C4.46,3.5 5.17,3 6,3H15M15,5H5.97L3,12V14H11.78L10.65,19.32L15,14.97V5Z" /></svg>
+            </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <BR>
+      <FORM>
+        <CENTER>   <BUTTON type="SUBMIT"><a href="lastpage.html">SUBMIT</a></CENTER>
+              </FORM> 
+</body>
+</html>
